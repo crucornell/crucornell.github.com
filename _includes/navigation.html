@@ -1,7 +1,7 @@
 <ul id="navigation">
-  <li class="current_page_item"><a href="http://crucornell.com/">HOME</a></li>
-  <li class="page_item"><a href="http://crucornell.com/im-new-here/">I'm New Here</a></li>
-  <li class="page_item"><a href="http://crucornell.com/news-and-events/">News and Events</a></li>
-  <li class="page_item"><a href="http://crucornell.com/blog">Blog</a></li>
-  <li class="page_item"><a href="http://crucornell.com/about-us/">About Us</a></li>
+  <li class="{%if page.url == '/'%}current_page_item{%else%}page_item{%endif%}"><a href="http://crucornell.com/">HOME</a></li>
+  <li class="{%if page.url contains 'im-new-here'%}current_page_item{%else%}page_item{%endif%}"><a href="im-new-here">I'm New Here</a></li>
+  <li class="{%if page.url contains 'news-and-events'%}current_page_item{%else%}page_item{%endif%}"><a href="news-and-events">News and Events</a></li>
+  <li class="{%if page.url contains 'blog'%}current_page_item{%else%}page_item{%endif%}"><a href="blog">Blog</a></li>
+  <li class="{%if page.url contains 'about-us'%}current_page_item{%else%}page_item{%endif%}"><a href="about-us">About Us</a></li>
 </ul><!--/#navigation-->
