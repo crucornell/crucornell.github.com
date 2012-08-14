@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+jekyll --base-url http://crucornell.com/dev && rsync -avz -e ssh --delete _site/ cornellc@cornellcru.com:/home/cornellc/public_html/dev/
