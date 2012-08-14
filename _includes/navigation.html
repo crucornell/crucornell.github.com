@@ -1,7 +1,7 @@
 <ul id="navigation">
-  <li class="{%if page.url == '/'%}current_page_item{%else%}page_item{%endif%}"><a href="http://crucornell.com/">HOME</a></li>
-  <li class="{%if page.url contains 'im-new-here'%}current_page_item{%else%}page_item{%endif%}"><a href="im-new-here">I'm New Here</a></li>
-  <li class="{%if page.url contains 'news-and-events'%}current_page_item{%else%}page_item{%endif%}"><a href="news-and-events">News and Events</a></li>
-  <li class="{%if page.url contains 'blog'%}current_page_item{%else%}page_item{%endif%}"><a href="blog">Blog</a></li>
-  <li class="{%if page.url contains 'about-us'%}current_page_item{%else%}page_item{%endif%}"><a href="about-us">About Us</a></li>
+  <li class="{%if page.url == '/index.html' %}current_page_item{%else%}page_item{%endif%}"><a href="{{site.baseurl}}/">HOME</a></li>
+  <li class="{%if page.url contains 'im-new-here'%}current_page_item{%else%}page_item{%endif%}"><a href="{{site.baseurl}}/im-new-here">I'm New Here</a></li>
+  <li class="{%if page.url contains 'news-and-events'%}current_page_item{%else%}page_item{%endif%}"><a href="{{site.baseurl}}/news-and-events">News and Events</a></li>
+  <li class="{%if page.url contains 'blog'%}current_page_item{%else%}page_item{%endif%}"><a href="{{site.baseurl}}/blog">Blog</a></li>
+  <li class="{%if page.url contains 'about-us'%}current_page_item{%else%}page_item{%endif%}"><a href="{{site.baseurl}}about-us">About Us</a></li>
 </ul><!--/#navigation-->
