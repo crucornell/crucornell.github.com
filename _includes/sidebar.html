@@ -1,11 +1,7 @@
 <div id="sidebar">
   <ul class="nav">
-    <li class="page_item page-item-130"><a href="http://crucornell.com/im-new-here/find-a-church/">Find A Church</a></li>
-    <li class="page_item page-item-183"><a href="http://crucornell.com/im-new-here/campus-ministries/">Campus Ministries</a></li>
-    <li class="page_item page-item-413"><a href="http://crucornell.com/im-new-here/everystudent-com-2/">Everystudent.com</a></li>
-    <li class="page_item page-item-11"><a href="http://crucornell.com/im-new-here/following-jesus/">Following Jesus</a></li>
-    <li class="page_item page-item-252"><a href="http://crucornell.com/im-new-here/bible/">Bible</a></li>
-    <li class="page_item page-item-254"><a href="http://crucornell.com/im-new-here/prayer/">Prayer</a></li>
-    <li class="page_item page-item-256"><a href="http://crucornell.com/im-new-here/fellowship/">Fellowship</a></li>
+    {% for item in page.sidebar-items %}
+      <li class="page_item"><a href="{{item.link}}">{{item.title}}</a></li>
+    {% endfor %}
   </ul><!--/.nav-->
 </div><!--/#sidebar-->
