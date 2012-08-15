@@ -1,7 +1,7 @@
 <div id="sidebar">
   <ul class="nav">
     {% for item in page.sidebar-items %}
-      <li class="page_item"><a href="{{item.link}}">{{item.title}}</a></li>
+    <li class="page_item {%if page.url contains item.link%}current_page_item{%endif%}"><a href="{{item.link}}">{{item.title}}</a></li>
     {% endfor %}
   </ul><!--/.nav-->
 </div><!--/#sidebar-->
