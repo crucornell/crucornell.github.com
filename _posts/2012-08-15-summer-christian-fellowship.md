@@ -2,6 +2,6 @@
 src: assets/images/heroes/SCF-hero.jpg
 href: summer-christian-fellowship
 title: Summer Christian Fellowship
-visible: true
+published: true
 date: 2012-07-01
 ---
