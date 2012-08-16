@@ -2,7 +2,6 @@ safe: true
 lsi: false
 pygments: true
 exclude: deploy tumblr_theme.html
-base-url: http://crucornell.github.com/crucornell
 prose:
   metadata:
     "_posts": |
