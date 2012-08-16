@@ -1,102 +1,15 @@
 <head>
   <title>Cru @ Cornell | {{page.title}}</title>
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/stylesheets/main.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="http://crucornell.com/assets/stylesheets/main.css" type="text/css" media="screen" />
 
-  <style type="text/css">
-    .post img, .post a img { border:1px solid #222; padding:5px; margin:0;  background:#555; }
-    .post a:hover img { border:1px solid #849ca0; background:#59847d; }
-  </style>
-
-
-  <link rel="alternate" type="application/rss+xml" title="Cru @ Cornell &raquo; Front Page Comments Feed" href="http://crucornell.com/front-page/feed/" />
-  <link rel='stylesheet' id='Social Media Counters CSS-css'  href='http://crucornell.com/wp-content/plugins/social-media-counters/style.css?ver=3.4' type='text/css' media='all' />
-  <script type='text/javascript' src='http://crucornell.com/wp-includes/js/jquery/jquery.js?ver=1.7.2'></script>
-  <script type='text/javascript' src='http://crucornell.com/wp-includes/js/comment-reply.js?ver=3.4'></script>
-  <style type="text/css">img.nothumb{border:0;margin:0 0 0 2px !important;}</style>
-  <!-- Tweet This v1.8.3 b037 mode alpha zeta -->
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://crucornell.com/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://crucornell.com/wp-includes/wlwmanifest.xml" /> 
-<link rel='prev' title='Big Break 2011' href='http://crucornell.com/big-break-2011/' />
-<link rel='next' title='Blog' href='http://crucornell.com/blog/' />
-<meta name="generator" content="WordPress 3.4" />
-<link rel='canonical' href='http://crucornell.com/' />
-<link rel='shortlink' href='http://j.mp/OnSsOc' />
-<script type="text/javascript" src="http://www.scribd.com/javascripts/view.js"></script><script type="text/javascript" src="http://crucornell.com/wp-content/plugins/ipaper/ipaper.js"></script><script type='text/javascript' src='http://crucornell.com/wp-includes/js/tw-sack.js?ver=1.6.1'></script>
-<script type="text/javascript">
-  function quick_contact_send() { //Send Message Ajax Call
-    //Deactivate submit button 
-    var submit_button = document.getElementById('quick_contact_submit');
-    submit_button.disabled = true;
-    //Get Input Fields (Clear them if they are the autofill message)
-    var name = document.getElementById('quick_contact_name').value;
-    if(name == "Please enter your name...")
-      name = "";
-    var email = document.getElementById('quick_contact_email').value;
-    if(email == "So that we can reply to you...")
-      email = "";
-    var phone = document.getElementById('quick_contact_phone').value;
-    if(phone == "So that we can reply to you...")
-      phone = "";
-    var message = document.getElementById('quick_contact_message').value;
-    if(message == "Questions? Comments? Enter them here (no HTML please)...")
-      message = "";
-    var captcha = document.getElementById('quick_contact_captcha_text').value;
-    if(captcha == "Type text at left...")
-      captcha = "";
-    //Ensure that there is at least a name and an email or phone
-    var error_default = "Please fill out the following before submitting:\n";
-    var error = error_default;
-    if(name == "" || name == null)
-      error += "  - Please enter your name.\n";
-    if((email == "" || email == null) && (phone == "" || phone == null)) 
-      if(error != "") error += "  - Please enter either a phone number or email for us to contact you.\n";
-    if(captcha == "" || captcha == null)
-      error += "  - Please enter the text from the image.\n";
-    if(error != error_default) {
-      submit_button.disabled = false;
-      alert(error);
-      return;
-    }
-    //If the message is empty ask the user to conferm that they ment to hit the submit button
-    if(message == "" && !confirm("Are you sure you want to send without entering a message?")) {
-      submit_button.disabled = false;
-      return;
-    }
-    //Display processing message
-    submit_message = document.getElementById('quick_contact_submit_message');
-    submit_message.className = "quick_contact_message";
-    submit_message.innerHTML = "Submitting Message, Please Wait...";
-    //Build SACK Call
-    var mysack = new sack("http://crucornell.com/wp-content/plugins/quick-contact/quick-contact.php");
-    mysack.execute = 1;
-    mysack.method = 'POST';
-    mysack.setVar("quick_contact_name",name);
-    mysack.setVar("quick_contact_email",email);
-    mysack.setVar("quick_contact_phone",phone);
-    mysack.setVar("quick_contact_message",message);
-    mysack.setVar("quick_contact_captcha",captcha);
-    mysack.setVar("quick_contact_action","send_message");
-    mysack.onError = function() { alert('An ajax error occured while sending your message. Please reload the page and try again.') };
-    mysack.runAJAX();//excecute
-    return;
-  }
-
-  function quick_contact_reset_form() { //Reset Form Javascript Call
-    document.getElementById('quick_contact_form').innerHTML = '<table width=\'100%\'  border=\'0\' cellspacing=\'0\' cellpadding=\'0\'><tr><th>Name:</th><td><input type=\'text\' id=\'quick_contact_name\' class=\'quick_contact_faded\' value=\'Please enter your name...\' maxlength=\'100\' onFocus=\'if(this.value == "Please enter your name..."){ this.value = ""; this.className = "quick_contact_focused"; }\'/></td></tr><tr><th>Email:</th><td><input type=\'text\' id=\'quick_contact_email\' class=\'quick_contact_faded\' value=\'So that we can reply to you...\' maxlength=\'150\' onFocus=\'if(this.value == "So that we can reply to you..."){ this.value = ""; this.className = "quick_contact_focused"; };\'/></td></tr><tr><th>Phone:</th><td><input type=\'text\' id=\'quick_contact_phone\' class=\'quick_contact_faded\' value=\'So that we can reply to you...\' maxlength=\'100\' onFocus=\'if(this.value == "So that we can reply to you..."){ this.value = ""; this.className = "quick_contact_focused"; };\'/></td></tr><tr><th>Message:</th><td><textarea id=\'quick_contact_message\' class=\'quick_contact_faded\' onFocus=\'if(this.value == "Questions? Comments? Enter them here (no HTML please)..."){ this.value = ""; this.className = "quick_contact_focused"; };\'>Questions? Comments? Enter them here (no HTML please)...</textarea></td></tr><tr><th><img id=\'quick_contact_captcha\' src=\'?quick_contact_action=get_captcha\' align=\'right\'/></th><td><input type=\'text\' id=\'quick_contact_captcha_text\' class=\'quick_contact_faded\' style=\'width:110px;\' value=\'Type text at left...\' maxlength=\'20\' onFocus=\'if(this.value == "Type text at left..."){ this.value = ""; this.className = "quick_contact_focused"; };\'/> <small><a href=\'javascript:quick_contact_reset_captcha();\'>I can\'t read the text, please reset it.</a></small></td></tr><tr><th>&nbsp;</th><td style=\'padding-top:2px;\'><input type=\'submit\' id=\'quick_contact_submit\' value=\'Send\' onClick=\'quick_contact_send(); return false;\' style=\'width:50px;\'><input type=\'button\' id=\'quick_contact_cancel\' value=\'Cancel\' style=\'width:60px;\' onClick=\'quick_contact_reset_form();\'> <span style=\'font-size:0.7em;\'>Powered by <a href=\'http://quickcontact.squarecompass.com/\'>Quick Contact</a></span><br/><div id=\'quick_contact_submit_message\'>&nbsp;</div></td></tr><tr><th>&nbsp;</th><td></td></tr></table>';
-  }
-
-  var quick_contact_reset_captcha_count = 0;
-  function quick_contact_reset_captcha() { //Reset Form Javascript Call
-    quick_contact_reset_captcha_count++;
-    document.getElementById('quick_contact_captcha').src = 'http://crucornell.com/wp-content/plugins/quick-contact/quick-contact.php?quick_contact_action=get_captcha&count='+quick_contact_reset_captcha_count;
-  }
-</script>
-<script type="text/javascript" src="http://crucornell.com/wp-content/themes/cruwp/js/scroll.js"></script>
-<script type="text/javascript" src="http://crucornell.com/wp-content/themes/cruwp/js/jscript.js"></script>
-<script type="text/javascript" src="http://crucornell.com/wp-content/themes/cruwp/js/comment.js"></script>
+<!--
 <script type="text/javascript" src="http://crucornell.com/wp-content/themes/cruwp/js/jquery.js"></script>
 <script type="text/javascript" src="http://crucornell.com/wp-content/themes/cruwp/js/easySlider1.7.js"></script>
 <script type="text/javascript" src="http://crucornell.com/wp-content/themes/cruwp/js/application.js"></script>
+-->
+<script type="text/javascript" src="http://crucornell.com/assets/javascripts/jquery.js"></script>
+<script type="text/javascript" src="http://crucornell.com/assets/javascripts/easySlider1.7.js"></script>
+<script type="text/javascript" src="http://crucornell.com/assets/javascripts/application.js"></script>
 <!-- Google Analytics -->
 <script type="text/javascript">
 
