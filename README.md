@@ -17,7 +17,8 @@ TODO: introduction and rationale
 * [Know a bit about Git](https://github.com/blog/120-new-to-git/) so you can collaborate on the site with us stepping on one-another's toes
 * [Have Ruby setup on your machine](http://www.ruby-lang.org/en/downloads/)
 * [Have the Jekyll gem installed](https://github.com/mojombo/jekyll/wiki/install)
-* [Know a bit about Jekyll](http://klepas.org/jekyll-a-static-site-generator/) (<-- Nice blog post about Jekyll. Note that [_our_ blog is on Tumblr](http://crucornell.tumblr.com), and we're using Jekyll's "blog-awareness" in a non-standard way: for the front-page carousel. If this doesn't make sense yet, don't worry about it.)
+* [Understand Jekyll well](http://klepas.org/jekyll-a-static-site-generator/) (<-- Nice blog post about Jekyll. Note that [_our_ blog is on Tumblr](http://crucornell.tumblr.com), and we're using Jekyll's "blog-awareness" in a non-standard way: for the front-page carousel. If this doesn't make sense yet, don't worry about it.)
+* It would probably help to [know a little bit about Markdown](http://daringfireball.net/projects/markdown/basics/), 'cause it's cool and Jekyll and GitHub have native support for it. This README.md was written with Markdown, which GitHub automatically displays as HTML.
 * Finally, clone [the main repository](https://github.com/crucornell/crucornell.github.com) on your machine with
   > git clone git@github.com:crucornell/crucornell.github.com.git
 
@@ -31,6 +32,8 @@ TODO: introduction and rationale
 
 ## Normal Development Workflow
 
+0. Run to start a server that automatically rebuilds the site when you change files, and serves the site from [http://localhost:4000/](http://localhost:4000/) for your convenience:
+   > jekyll --server --auto
 1. Pull down and merge in the latest changes by other people.
    > git pull origin master
 2. Work on stuff.
@@ -51,4 +54,49 @@ If you're using some graphical face to Git, you're on your own. :)
 
 # Cru Website Layout and Conventions
 
-Coming soon. TODO
+The Cru website makes use of Jekyll in some interesting ways, which are probably best understood by cloning the repository and poking around. Some of the more important wizardry is explained below.
+
+## Normal Layout
+
+With a few exceptions, the Cru website uses the normal Jekyll layout, which is:
+
+* _includes/ - contans reusable small pieces of the layout like the navigation bar, header and footer, used in templates and pages
+* _layouts/ - contains the main page templates used by individual pages
+* _posts/ - *unlike* normal Jekyll usage, doesn't contain blog posts, so to speak, but rather contains metadata necessary to display the hero images in the front-page carousel - see below
+* _config.yml - site-wide configuration file
+* _site/ - when you run jekyll command, the generated site goes in this directory
+
+All other folders and files (except those ignored by _config.yml) are transformed by Jekyll (templates applied and Markdown converted to HTML, etc.) and copied into "_site/", the contents of which is what gets uploaded to the main web server periodically (the "generated" site).
+
+## Cru Special Cases
+
+* The file "tumblr_theme.html" is a back-up of the tumblr theme that looks like the blog, and is ignored in _config.yml.
+* The file "deploy" is the deployment script for regenerating the site and uploading it to the main website with rsync. Only the webmaster knows the username and password, so only the webmaster can change the live site with:
+  > ./deploy USERNAME
+* "Static" assets are in the "assets/" directory, which contains three sub-directories: "stylesheets/", "javascripts/" and "images". Even these will get processed by Jekyll if they contain YAML front-matter.
+
+## Cru Conventions
+
+### Front-Page Carousel
+
+The front-lage carousel is populated dynamically from the contents of "_posts/". Each file in there has special YAML front-matter (metadata) which specifies a hero image to be displayed.
+
+*They are ordered in reverse-order by date*, which is determined by the filename by default, but may be overridden inside the metadata. The following information must be provided in the metadata for an image to be displayed correctly in the front-page carousel:
+
+* src: assets/images/heroes/blogmoved.jpg - relative path to hero image
+* href: blog - relative link to internal page a user will be taken to when they click the hero image
+* title: New Blog - text to be displayed when a user hovers the mouse over the hero image
+* published: true - whether or not to display the image at all
+* date: 2012-06-01 - optional. the date you would like the system to *think* the image was created, if different from the one in the filename
+
+A file in posts must have this format:
+> YYYY-MM-DD-some-name-for-your-own-memory-aid.md
+
+### "Normal" Pages
+
+All pages (with the exception of index.html) must specify a layout (from "_layouts", and add one if necessary) and a title in the YAML front-matter.
+
+New pages that need a sidebar (like "about-us") should use the convention in existing sidebar pages. For instance, "about-us" and sub-pages all use the "about-us" layout because that layout knows what pages are in the sidebar, contains their text and links, and renders the sidebar accurately based on the user's current location in the sub-pages.
+
+New pages without a sidebar may use the "without-sidebar" layout.
+
