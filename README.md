@@ -4,7 +4,9 @@ Source for CruCornell.com.
 
 A simple Jekyll-generated site to allow for ease of maintenance by busy Cornell students.
 
-TODO: introduction and rationale
+## Introduction
+
+The Cru website was originally developed as a WordPress theme, but it quickly became clear that the learning curve for new web-team members was too high, and that development on the site had stalled. In an effort to simplify things, the design was rebuilt as a Jekyll-generated static site and two Tumblr blogs (for the dynamic content that should be editable by non-technical people: News and Events and the Cru Blog).
 
 ## Getting Started
 
