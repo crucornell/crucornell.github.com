@@ -16,7 +16,7 @@ The Cru website was originally developed as a WordPress theme, but it quickly be
 * [Have a GitHub account](https://github.com/signup/free)
 * Be added as a member of [the crucornell organization](https://github.com/crucornell) ([email me](mailto:webmaster@crucornell.com))
 * [Have Git setup on your machine](https://help.github.com/articles/set-up-git)
-* [Know a bit about Git](https://github.com/blog/120-new-to-git/) so you can collaborate on the site with us stepping on one-another's toes
+* [Know a bit about Git](https://github.com/blog/120-new-to-git/) so you can collaborate on the site without us stepping on one-another's toes
 * [Have Ruby setup on your machine](http://www.ruby-lang.org/en/downloads/)
 * [Have the Jekyll gem installed](https://github.com/mojombo/jekyll/wiki/install)
 * [Understand Jekyll well](http://klepas.org/jekyll-a-static-site-generator/) (<-- Nice blog post about Jekyll. Note that [_our_ blog is on Tumblr](http://crucornell.tumblr.com), and we're using Jekyll's "blog-awareness" in a non-standard way: for the front-page carousel. If this doesn't make sense yet, don't worry about it.)
