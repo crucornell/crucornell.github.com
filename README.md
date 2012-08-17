@@ -100,8 +100,8 @@ All pages (with the exception of index.html) must specify a layout (from "_layou
 
 * Pages with a sidebar (like "about-us") should use the convention in existing sidebar pages. For instance, "about-us" and sub-pages all use the "about-us" layout because that layout knows what pages are in the sidebar, contains their text and links, and renders the sidebar accurately based on the user's current location in the sub-pages.
 * Pages without a sidebar may use the "without-sidebar" layout.
-* Pages that should appear under a strikingly beautiful hero image should use the "under-image" layout, and specify a "link" (where you want to go if you click the hero image) and "src" (where the hero image should come from, which *must* be 880x350) in addition to the "layout" and "title". Check out the-mott-house.md for an example.
-* Pages that should appear under a Vimeo video iframe should use the "under-video" layout, and specify a "src" for the iframe in addition to the usual "layout" and "title". Note that this layout could be used to display *anything* you specify as the "src" that fits into the 880x350 hero box. Check out upstate-fall-retreat.html as an example.
+* Pages that should appear under a strikingly beautiful hero image should use the "under-image" layout, and specify a "link" (where you want to go if you click the hero image) and "src" (where the hero image should come from, which *must* be 880x350) in addition to the "layout" and "title". Check out "the-mott-house.md" for an example.
+* Pages that should appear under a Vimeo video iframe should use the "under-video" layout, and specify a "src" for the iframe in addition to the usual "layout" and "title". Note that this layout could be used to display *anything* you specify as the "src" that fits into the 880x350 hero box. Check out "upstate-fall-retreat.html" as an example.
 
 ### Miscellaneous Important
 
