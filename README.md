@@ -85,7 +85,7 @@ The front-lage carousel is populated dynamically from the contents of "_posts/".
 
 *They are ordered in reverse-order by date*, which is determined by the filename by default, but may be overridden inside the metadata. The following information must be provided in the metadata for an image to be displayed correctly in the front-page carousel:
 
-* src: assets/images/heroes/blogmoved.jpg - relative path to hero image
+* src: assets/images/heroes/blogmoved.jpg - relative path to hero image, which  *must* be 880x350
 * href: blog - relative link to internal page a user will be taken to when they click the hero image
 * title: New Blog - text to be displayed when a user hovers the mouse over the hero image
 * published: true - whether or not to display the image at all
@@ -94,11 +94,17 @@ The front-lage carousel is populated dynamically from the contents of "_posts/".
 A file in posts must have this format:
 > YYYY-MM-DD-some-name-for-your-own-memory-aid.md
 
-### "Normal" Pages
+### Common Page Layouts
 
-All pages (with the exception of index.html) must specify a layout (from "_layouts", and add one if necessary) and a title in the YAML front-matter.
+All pages (with the exception of index.html) must specify a layout (from "_layouts", and add one if necessary) and a title in the YAML front-matter. The following layouts are available to you already, and of course you may make your own.
 
-New pages that need a sidebar (like "about-us") should use the convention in existing sidebar pages. For instance, "about-us" and sub-pages all use the "about-us" layout because that layout knows what pages are in the sidebar, contains their text and links, and renders the sidebar accurately based on the user's current location in the sub-pages.
+* Pages with a sidebar (like "about-us") should use the convention in existing sidebar pages. For instance, "about-us" and sub-pages all use the "about-us" layout because that layout knows what pages are in the sidebar, contains their text and links, and renders the sidebar accurately based on the user's current location in the sub-pages.
+* Pages without a sidebar may use the "without-sidebar" layout.
+* Pages that should appear under a strikingly beautiful hero image should use the "under-image" layout, and specify a "link" (where you want to go if you click the hero image) and "src" (where the hero image should come from, which *must* be 880x350) in addition to the "layout" and "title". Check out the-mott-house.md for an example.
+* Pages that should appear under a Vimeo video iframe should use the "under-video" layout, and specify a "src" for the iframe in addition to the usual "layout" and "title". Note that this layout could be used to display *anything* you specify as the "src" that fits into the 880x350 hero box. Check out upstate-fall-retreat.html as an example.
 
-New pages without a sidebar may use the "without-sidebar" layout.
+### Miscellaneous Important
+
+* *ANY* page in the site may be either HTML or Markdown (or any of the other templating languages Jekyll supports). A case in point would be the-mott-house.md, which was converted to Markdown just to make an example. When you generate the site, this gets converted to the-mott-house.html with appropriate formatting.
+* There's actually a misc/ directory in which you could put some random pages that don't seem to fit anywhere else in the hierarchy, FYI.
 
