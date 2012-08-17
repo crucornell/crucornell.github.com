@@ -22,6 +22,7 @@ The Cru website was originally developed as a WordPress theme, but it quickly be
 * [Understand Jekyll well](http://klepas.org/jekyll-a-static-site-generator/) (<-- Nice blog post about Jekyll. Note that [_our_ blog is on Tumblr](http://crucornell.tumblr.com), and we're using Jekyll's "blog-awareness" in a non-standard way: for the front-page carousel. If this doesn't make sense yet, don't worry about it.)
 * It would probably help to [know a little bit about Markdown](http://daringfireball.net/projects/markdown/basics/), 'cause it's cool and Jekyll and GitHub have native support for it. This README.md was written with Markdown, which GitHub automatically displays as HTML.
 * Finally, clone [the main repository](https://github.com/crucornell/crucornell.github.com) on your machine with
+
   > git clone git@github.com:crucornell/crucornell.github.com.git
 
 ### For Designers and Content Editors
@@ -34,22 +35,32 @@ The Cru website was originally developed as a WordPress theme, but it quickly be
 
 ## Normal Development Workflow
 
-0. Run to start a server that automatically rebuilds the site when you change files, and serves the site from [http://localhost:4000/](http://localhost:4000/) for your convenience:
+1. Run to start a server that automatically rebuilds the site when you change files, and serves the site from [http://localhost:4000/](http://localhost:4000/) for your convenience:
+   
    > jekyll --server --auto
-1. Pull down and merge in the latest changes by other people.
+   
+2. Pull down and merge in the latest changes by other people.
+   
    > git pull origin master
-2. Work on stuff.
-3. Whenever you've done a logical unit of work (small), commit your work to your local repository so it cannot be lost.
+   
+3. Work on stuff.
+4. Whenever you've done a logical unit of work (small), commit your work to your local repository so it cannot be lost.
+   
    > git commit -am "This 'commit message' should be generally pretty short describing what you did since the last commit."
-4. Repeat steps 2 and 3 until you're ready to show the world.
-5. Pull down and merge in the latest changes by other people (again, in case someone's changed stuff while you're been working).
+   
+5. Repeat steps 2 and 3 until you're ready to show the world.
+6. Pull down and merge in the latest changes by other people (again, in case someone's changed stuff while you're been working).
+   
    > git pull origin master
-6. Resolve any conflicts (when you and someone else have edited the same file or something) and commit the resolutions if necessary.
-7. Push everything to the remote repository on GitHub!
+   
+7. Resolve any conflicts (when you and someone else have edited the same file or something) and commit the resolutions if necessary.
+8. Push everything to the remote repository on GitHub!
+   
    > git push origin master
-8. Check out how things look at [crucornell.github.com](http://crucornell.github.com) (GitHub may take up to ten minutes to regenerate the site after a push) 
-9. Celebrate with some nice, refreshing homework. Then start over at step 1.
-10. The webmaster will upload the site to crucornell.com occasionally, whenever he or she is satisfied it's awesome.
+   
+9. Check out how things look at [crucornell.github.com](http://crucornell.github.com) (GitHub may take up to ten minutes to regenerate the site after a push) 
+10. Celebrate with some nice, refreshing homework. Then start over at step 1.
+11. The webmaster will upload the site to crucornell.com occasionally, whenever he or she is satisfied it's awesome.
 
 
 If you're using some graphical face to Git, you're on your own. :)
@@ -92,6 +103,7 @@ The front-lage carousel is populated dynamically from the contents of "_posts/".
 * date: 2012-06-01 - optional. the date you would like the system to *think* the image was created, if different from the one in the filename
 
 A file in posts must have this format:
+
 > YYYY-MM-DD-some-name-for-your-own-memory-aid.md
 
 ### Common Page Layouts
