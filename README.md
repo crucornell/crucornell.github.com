@@ -12,7 +12,7 @@ The Cru website was originally developed as a WordPress theme, but it quickly be
 
 ### For Developers
 
-* Bear in mind that I kindof assume you're either on a Mac or Linux. The directions may need to be adapted a bit if you're on Windows. [This blog post](http://blog.ntotten.com/2012/03/02/github-pages-with-jekyll-local-development-on-windows/) will get you through the Jekyll install on Windows.
+* Bear in mind that I kindof assume you're either on a Mac or Linux. The directions may need to be adapted a bit if you're on Windows. [This blog post](http://blog.ntotten.com/2012/03/02/github-pages-with-jekyll-local-development-on-windows/) will get you through the Ruby and Jekyll install on Windows.
 * [Have a GitHub account](https://github.com/signup/free)
 * Be added as a member of [the crucornell organization](https://github.com/crucornell) ([email me](mailto:webmaster@crucornell.com))
 * [Have Git setup on your machine](https://help.github.com/articles/set-up-git)
