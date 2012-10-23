@@ -264,7 +264,7 @@ BODY {
   font-size: 10px;
 }
 #pagination * {
-  padding: 3px 4px;
+  padding: 1px 1px;
   background: #333333;
 }
 #pagination A { color: #bbbbbb; }
