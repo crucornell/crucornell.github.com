@@ -23,7 +23,9 @@ The Cru website was originally developed as a WordPress theme, but it quickly be
 * It would probably help to [know a little bit about Markdown](http://daringfireball.net/projects/markdown/basics/), 'cause it's cool and Jekyll and GitHub have native support for it. This README.md was written with Markdown, which GitHub automatically displays as HTML.
 * Finally, clone [the main repository](https://github.com/crucornell/crucornell.github.com) on your machine with
 
-  > git clone git@github.com:crucornell/crucornell.github.com.git
+  > git clone git@github.com:crucornell/crucornell.github.com.git crucornell-code
+  
+  which will pull the repository down into a directory named "crucornell-code".
 
 ### For Designers and Content Editors
 
