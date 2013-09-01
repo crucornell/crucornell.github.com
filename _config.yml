@@ -1,10 +1,14 @@
 safe: true
 lsi: false
 pygments: true
-exclude: deploy tumblr_theme.html
+exclude:
+  - deploy
+  - tumblr_theme.html
+include:
+  - .htaccess
 prose:
   metadata:
-    "_posts": |
+    _posts: |
       src: relative/path/to/image/file/from/root
       href: relative/path/to/linked/page/from/root
       title: Text To Appear On Mouse Hover
