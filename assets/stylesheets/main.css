@@ -21,7 +21,7 @@ BODY {
   min-width: 960px;
   max-width: 960px;
   margin: 0 auto;
-  background: #0e0e0e url({{site.baseurl}}/assets/images/body-bg-light.jpg) top center no-repeat;
+  background: #0e0e0e url({{site.url}}/assets/images/body-bg-light.jpg) top center no-repeat;
   border: 1px solid #303030;
   border-width: 0 1px;
 }
@@ -93,7 +93,7 @@ BODY {
   font-size: 18px;
 }
 #navigation LI A:hover {
-  background: url({{site.baseurl}}/assets/images/top-nav-active.gif) repeat-x;
+  background: url({{site.url}}/assets/images/top-nav-active.gif) repeat-x;
   border: 1px solid #303030;
   border-top: 1px solid #111111;
   color: #ffffff;
@@ -102,7 +102,7 @@ BODY {
   -webkit-border-radius: 0 0 8px 8px;
 }
 #navigation LI A:active {
-  background: url({{site.baseurl}}/assets/images/top-nav-active.gif) repeat-x;
+  background: url({{site.url}}/assets/images/top-nav-active.gif) repeat-x;
   border: 1px solid #303030;
   border-top: 1px solid #111111;
   color: #ffffff;
@@ -111,7 +111,7 @@ BODY {
   -webkit-border-radius: 0 0 8px 8px;
 }
 #navigation LI.current_page_item A {
-  background: url({{site.baseurl}}/assets/images/top-nav-active.gif) repeat-x;
+  background: url({{site.url}}/assets/images/top-nav-active.gif) repeat-x;
   border: 1px solid #303030;
   border-top: 1px solid #111111;
   color: #0084ff;
@@ -310,7 +310,7 @@ BODY {
 }
 #sidebar .nav LI { padding-bottom: 1px; }
 #sidebar .nav LI A {
-  background: url({{site.baseurl}}/assets/images/sidebar-inactive.gif);
+  background: url({{site.url}}/assets/images/sidebar-inactive.gif);
   color: #5185cd;
   display: block;
   width: 156px;
@@ -322,11 +322,11 @@ BODY {
 }
 #sidebar .nav LI A:hover {
   color: #0084ff;
-  background: url({{site.baseurl}}/assets/images/sidebar-active.gif);
+  background: url({{site.url}}/assets/images/sidebar-active.gif);
 }
 #sidebar .nav LI A:active {
   color: #0084ff;
-  background: url({{site.baseurl}}/assets/images/sidebar-active.gif);
+  background: url({{site.url}}/assets/images/sidebar-active.gif);
 }
 #sidebar .nav LI:first-child A {
   border-radius: 8px 0 0 0;
@@ -340,7 +340,7 @@ BODY {
 }
 #sidebar .nav LI.current_page_item A {
   color: #0084ff;
-  background: url({{site.baseurl}}/assets/images/sidebar-active.gif);
+  background: url({{site.url}}/assets/images/sidebar-active.gif);
 }
 #sidebar + #main-cont { margin-right: 221px; }
 #sidebar + #blog { margin-right: 221px; } /* hack because blog had some functionality i wanted, but it wouldn't do this one thing */
@@ -746,7 +746,7 @@ ol li:first-child:last-child {
 
 
 #return_top a { position:absolute; position:fixed; right:0; bottom:15px;
-display:block; height:138px; width:38px; background:url({{site.baseurl}}/assets/images//return-top.png) no-repeat left top; border:none; text-decoration:none;
+display:block; height:138px; width:38px; background:url({{site.url}}/assets/images//return-top.png) no-repeat left top; border:none; text-decoration:none;
 }
 
 /*Social media counters plugin*/

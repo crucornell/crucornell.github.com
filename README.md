@@ -18,8 +18,8 @@ The Cru website was originally developed as a WordPress theme, but it quickly be
 * [Have Git setup on your machine](https://help.github.com/articles/set-up-git)
 * [Know a bit about Git](https://github.com/blog/120-new-to-git/) so you can collaborate on the site without us stepping on one-another's toes
 * [Have Ruby setup on your machine](http://www.ruby-lang.org/en/downloads/)
-* [Have the Jekyll gem installed](https://github.com/mojombo/jekyll/wiki/install)
-* [Understand Jekyll well](http://klepas.org/jekyll-a-static-site-generator/) (<-- Nice blog post about Jekyll. Note that [_our_ blog is on Tumblr](http://crucornell.tumblr.com), and we're using Jekyll's "blog-awareness" in a non-standard way: for the front-page carousel. If this doesn't make sense yet, don't worry about it.)
+* [Have the Jekyll gem installed](http://jekyllrb.com/docs/installation/)
+* [Understand Jekyll well](http://jekyllrb.com) (Jekyll's Documentation is organized into a really nice, linear tutorial. As you're reading it, keep in mind that [_our_ blog is on Tumblr](http://crucornell.tumblr.com), and we're using Jekyll's "blog-awareness" in a non-standard way: for the front-page carousel. If this doesn't make sense yet, don't worry about it.)
 * It would probably help to [know a little bit about Markdown](http://daringfireball.net/projects/markdown/basics/), 'cause it's cool and Jekyll and GitHub have native support for it. This README.md was written with Markdown, which GitHub automatically displays as HTML.
 * Finally, clone [the main repository](https://github.com/crucornell/crucornell.github.com) on your machine with
 
@@ -39,7 +39,7 @@ The Cru website was originally developed as a WordPress theme, but it quickly be
 
 1. Run to start a server that automatically rebuilds the site when you change files, and serves the site from [http://localhost:4000/](http://localhost:4000/) for your convenience:
    
-   > jekyll --server --auto
+   > jekyll server --watch
    
 2. Pull down and merge in the latest changes by other people.
    
