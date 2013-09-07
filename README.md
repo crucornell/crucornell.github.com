@@ -80,7 +80,8 @@ install Ruby and Jekyll locally:
 
 1. Run to start a server that automatically rebuilds the site when you change
    files, and serves the site from
-   [http://localhost:4000/](http://localhost:4000/) for your convenience:
+   [http://localhost:4000/](http://localhost:4000/) for your convenience (if
+   using the Cru Dev-Box, run this inside the VM):
    
    > jekyll server --watch
    
